@@ -9,9 +9,7 @@
 <?php include_once("php/nav.php");?>
 <!-- Nav End -->
 
-
-
-  <!-- ======= Hero Section ======= -->
+<!-- ======= Hero Section ======= -->
   <section id="hero" class="hero d-flex align-items-center">
 
     <div class="container">
