@@ -10,9 +10,6 @@ if(isset($_POST['submit'])){
     if($query){
         header('Location:../');
     }
-
-
-
 }else{
     //If the form is not submitted one can't access upload.php
     header('Location:../');

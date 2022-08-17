@@ -39,7 +39,29 @@
         </div>
       </div>
     </div>
-
+    <script>
+                      const clearInput = ()=>{
+                    [...document.querySelectorAll("input"),...document.querySelectorAll("textarea")].forEach(input=>{
+                        if(input.type==="checkbox"){
+                            input.checked=false;
+                        }else{
+                            input.value="";    
+                        }
+                        
+                    })
+                }
+                const getApiRequest = (data, api, callback) => {
+                let xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("POST", `http://localhost/FlexStart/api/${api}A.php`, true);
+                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xmlhttp.onreadystatechange = () => {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        callback(xmlhttp.responseText);
+                    }
+                };
+                xmlhttp.send(data);
+              }
+    </script>
   </section><!-- End Hero -->
 
   <main id="main">
@@ -1169,42 +1191,42 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="staticBackdropLabel">Become a member</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close"  data-bs-dismiss="modal" aria-label="Close" onclick="clearInput();document.getElementById('fail').hidden = true;document.getElementById('success').hidden = true;"></button>
         </div>
         <div class="modal-body">
-          <form action="upload.php" method="post">
             <!-- Form -->
             <div class="form-group">
               <div class="row mb-3">
                 <div class="col">
                   <label for="">Enter your name</label>
-                  <input class="form-control" type="text" placeholder="Name">
+                  <input class="form-control" name="f-name" type="text" placeholder="Name">
                 </div>
               </div>
               <div class="row mb-3">
-                <div class="col"><label for="">Enrollment Number <span style="color:red;">*</span></label>
-                  <input class="form-control" type="text" placeholder="0177CS161129 ">
+                <div class="col">
+                  <label for="">Enrollment Number <span style="color:red;">*</span></label>
+                  <input class="form-control" name="f-enroll-num"type="text" placeholder="0177CS161129 ">
                 </div>
                 <div class="col">
                   <label for="">Phone <span style="color:red;">*</span></label>
-                  <input class="form-control" type="number" placeholder="eg. +91- 9953100507" >
+                  <input class="form-control" name="f-num" type="number" placeholder="eg. +91- 9953100507" >
                 </div>
               </div>
               <div class="row mb-3">
                 <div class="col">
                   <label for="">Email Address <span style="color:red;">*</span></label>
-                  <input class="form-control" type="email" placeholder="eg. xyz@example.com">
+                  <input class="form-control" name="f-email" type="email" placeholder="eg. xyz@example.com" oninput="document.getElementById('email-warn').style.display='none'">
+                  <div id="email-warn" class="invalid-feedback">email already exists</div>
                 </div>
               </div>
               <div class="row mb-3">
                 <div class="col">
                   <label for="">-Select your year- <span style="color:red;">*</span></label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected="1">1th Year</option>
-                    <option value="2">2th Year</option>
-                    <option value="3">3th Year</option>
+                  <select class="form-select" name="f-year" aria-label="Default select example">
+                    <option selected value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
                     <option value="4">4th Year</option>
-                
                   </select>
                 </div>
               </div>
@@ -1212,17 +1234,39 @@
               <div class="row mb-3">
                 <div class="col">
                 <label for="">Enter your skills <span style="color:red;">*</span></label>
-
-                  <textarea style="overflow: auto; min-height:136px;resize:none;" class="form-control" placeholder="Programming, Dancing, singing, painting etc."></textarea>
+                  <textarea style="overflow: auto; min-height:136px;resize:none;" class="form-control" name="f-skills" placeholder="Programming, Dancing, singing, painting etc."></textarea>
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary">SUBMIT</button>
+              <button  class="btn btn-primary" id="submit-f">SUBMIT</button>
+              <script>
+
+              document.querySelector("#submit-f").onclick = (e)=>{
+                form_name= document.querySelector("input[name=f-name]").value
+                form_enroll_num= document.querySelector("input[name=f-enroll-num]").value
+                form_num= document.querySelector("input[name=f-num]").value
+                form_email= document.querySelector("input[name=f-email]").value
+                form_year= document.querySelector("select[name=f-year]").value
+                form_skills= document.querySelector("textarea[name=f-skills]").value
+                getApiRequest(`form_name=${form_name}&form_enroll_num=${form_enroll_num}&form_num=${form_num}&form_email=${form_email}&form_year=${form_year}&form_skills=${form_skills}`,"form-submit",(responseText)=>{
+                  console.log(responseText)
+                  if(responseText=="email-exist"){
+                    document.getElementById('email-warn').style.display='block'
+                    document.getElementById('fail').hidden = false;
+                    document.getElementById('success').hidden = true;
+                  }else{
+                    clearInput()
+                    alert("done")
+                    document.getElementById('fail').hidden = true;
+                    document.getElementById('success').hidden = false;
+                  }
+                })
+              }
+              </script>
             </div>
-          </form>
         </div>
         <div class="modal-footer">
-          <h5 style="color:green;"> Success Text</h5>
-          <h5 style="color:red;"> Faliure Text</h5>
+          <h5 style="color:green;" id="success" hidden> Success Text</h5>
+          <h5 style="color:red;" id="fail" hidden> Faliure Text</h5>
         </div>
       </div>
     </div>
