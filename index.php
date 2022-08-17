@@ -24,7 +24,7 @@
                 <i class="bi bi-arrow-right"></i>
               </a>
 
-              <a href="#about" class="btn-call-Us  scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn-call-Us  scrollto d-inline-flex align-items-center justify-content-center align-self-center">
                 <span>Register Here</span>
                 <i class="bi bi-arrow-right"></i>
               </a>
@@ -33,9 +33,8 @@
           </div>
         </div>
         <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-          <img src="assets/img/hero-img.png" class="img-fluid" alt="" style="
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% !important;
-">
+          <img src="assets/img/hero-img.png"  alt="" style="position:relative;left:-80px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% !important;height: auto;width: 952px;">
         </div>
       </div>
     </div>
@@ -74,9 +73,9 @@
           <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <div class="content">
               <h3>Who We Are</h3>
-              <h2>Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat corrupti reprehenderit.</h2>
+              <h2>We are a group of Computer Science Engineering Students from IES College of Technology. </h2>
               <p>
-                Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est corrupti.
+                We have a Student's Club registered and affiliated by AICTE. Our club is having different sections for performing different activities such as Tech Club, Yoga Club, Sports Club,Cultural activities Club etc and all these collectively forms the student's club called Dynamic Drillers.
               </p>
               <div class="text-center text-lg-start">
                 <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
@@ -139,7 +138,7 @@
     </section><!-- End Values Section -->
 
     <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
+    <!-- <section id="counts" class="counts">
       <div class="container" data-aos="fade-up">
 
         <div class="row gy-4">
@@ -187,16 +186,17 @@
         </div>
 
       </div>
-    </section><!-- End Counts Section -->
+    </section> -->
+    <!-- End Counts Section -->
 
-    <!-- ======= Features Section ======= -->
+    <!-- ======= Activies Section ======= -->
     <section id="features" class="features">
 
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h2>Features</h2>
-          <p>Laboriosam et omnis fuga quis dolor direda fara</p>
+          <h2>Activites</h2>
+          <p>The various activites performed by our clubs</p>
         </header>
 
         <div class="row">
@@ -211,42 +211,56 @@
               <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
                 <div class="feature-box d-flex align-items-center">
                   <i class="bi bi-check"></i>
-                  <h3>Eos aspernatur rem</h3>
+                  <h3>Activity</h3>
                 </div>
               </div>
 
               <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
                 <div class="feature-box d-flex align-items-center">
                   <i class="bi bi-check"></i>
-                  <h3>Facilis neque ipsa</h3>
+                  <h3>Activity</h3>
                 </div>
               </div>
 
               <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
                 <div class="feature-box d-flex align-items-center">
                   <i class="bi bi-check"></i>
-                  <h3>Volup amet voluptas</h3>
+                  <h3>Activity</h3>
                 </div>
               </div>
 
               <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
                 <div class="feature-box d-flex align-items-center">
                   <i class="bi bi-check"></i>
-                  <h3>Rerum omnis sint</h3>
+                  <h3>Activity</h3>
                 </div>
               </div>
 
               <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
                 <div class="feature-box d-flex align-items-center">
                   <i class="bi bi-check"></i>
-                  <h3>Alias possimus</h3>
+                  <h3>Activity</h3>
                 </div>
               </div>
 
               <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
                 <div class="feature-box d-flex align-items-center">
                   <i class="bi bi-check"></i>
-                  <h3>Repellendus mollitia</h3>
+                  <h3>Activity</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="650">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Activity</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="750">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Activity</h3>
                 </div>
               </div>
 
@@ -398,7 +412,8 @@
 
       </div>
 
-    </section><!-- End Features Section -->
+    </section>
+    <!-- End Activities Section -->
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
@@ -472,88 +487,6 @@
 
     </section><!-- End Services Section -->
 
-    <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Pricing</h2>
-          <p>Check our Pricing</p>
-        </header>
-
-        <div class="row gy-4" data-aos="fade-left">
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-            <div class="box">
-              <h3 style="color: #07d5c0;">Free Plan</h3>
-              <div class="price"><sup>$</sup>0<span> / mo</span></div>
-              <img src="assets/img/pricing-free.png" class="img-fluid" alt="">
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <a href="#" class="btn-buy">Buy Now</a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-            <div class="box">
-              <span class="featured">Featured</span>
-              <h3 style="color: #65c600;">Starter Plan</h3>
-              <div class="price"><sup>$</sup>19<span> / mo</span></div>
-              <img src="assets/img/pricing-starter.png" class="img-fluid" alt="">
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <a href="#" class="btn-buy">Buy Now</a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-            <div class="box">
-              <h3 style="color: #ff901c;">Business Plan</h3>
-              <div class="price"><sup>$</sup>29<span> / mo</span></div>
-              <img src="assets/img/pricing-business.png" class="img-fluid" alt="">
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <a href="#" class="btn-buy">Buy Now</a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-            <div class="box">
-              <h3 style="color: #ff0071;">Ultimate Plan</h3>
-              <div class="price"><sup>$</sup>49<span> / mo</span></div>
-              <img src="assets/img/pricing-ultimate.png" class="img-fluid" alt="">
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <a href="#" class="btn-buy">Buy Now</a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- End Pricing Section -->
 
     <!-- ======= F.A.Q Section ======= -->
     <section id="faq" class="faq">
@@ -944,8 +877,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <h4>Rahul Kumar Jha</h4>
+                <span>President</span>
                 <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
               </div>
             </div>
@@ -963,8 +896,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
+                <h4>Ujwal Deep</h4>
+                <span>Vice President</span>
                 <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
               </div>
             </div>
@@ -982,8 +915,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
+                <h4>Vinay Kumar</h4>
+                <span>Treasurer</span>
                 <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut architecto porro aspernatur molestiae modi.</p>
               </div>
             </div>
@@ -1001,8 +934,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
+                <h4>Arpit Mishra</h4>
+                <span>Head Cordinator</span>
                 <p>Rerum voluptate non adipisci animi distinctio et deserunt amet voluptas. Quia aut aliquid doloremque ut possimus ipsum officia.</p>
               </div>
             </div>
@@ -1015,7 +948,7 @@
     </section><!-- End Team Section -->
 
     <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
+    <!-- <section id="clients" class="clients">
 
       <div class="container" data-aos="fade-up">
 
@@ -1039,10 +972,11 @@
         </div>
       </div>
 
-    </section><!-- End Clients Section -->
+    </section> -->
+    <!-- End Clients Section -->
 
     <!-- ======= Recent Blog Posts Section ======= -->
-    <section id="recent-blog-posts" class="recent-blog-posts">
+    <!-- <section id="recent-blog-posts" class="recent-blog-posts">
 
       <div class="container" data-aos="fade-up">
 
@@ -1084,7 +1018,8 @@
 
       </div>
 
-    </section><!-- End Recent Blog Posts Section -->
+    </section> -->
+    <!-- End Recent Blog Posts Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -1182,7 +1117,7 @@
 
   <!-- Side button -->
   <button id="get-free-quote" style="position:fixed;top:70%;right:-60px;transform: rotate(-90deg);z-index:100;" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    GET FREE QUOTE </button>
+    Become a Member </button>
   <!--Side Button End-->
 
   <!-- Modal -->
